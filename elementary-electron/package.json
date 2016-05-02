@@ -1,0 +1,14 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "testing npm init",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "adam mcconnell",
+  "license": "ISC",
+  "dependencies": {
+    "cat-picture": "^5.1.2"
+  }
+}
