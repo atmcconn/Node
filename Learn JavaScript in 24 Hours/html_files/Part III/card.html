@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card Objects</title>
+    <script>
+		var suitArr = ['clubs', 'diamonds', 'hearts', 'spades']
+		var numArr = ['ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king']
+		function Card() {
+			this.suit = suitArr[Math.floor((Math.random() * 10)) % 4]
+			this.value = numArr[Math.floor((Math.random() * 100)) % 13]
+			this.shuffle = function() {
+				this.suit = suitArr[Math.floor((Math.random() * 10)) % 4]
+				this.value = numArr[Math.floor((Math.random() * 100)) % 13]
+			}
+		}
+		var card = new Card();
+    </script>
+</head>
+<body>
+	<input type="button" value="Show card" onclick="alert(card.value + ' of ' + card.suit); card.shuffle();" />
+	<input type="button" value="Shuffle" onclick="card.shuffle(); alert('Card has been reshuffled')" />
+</body>
+</html>

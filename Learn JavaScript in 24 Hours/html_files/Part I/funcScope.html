@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Function Scope</title>
+	<script>
+		var a = 10;
+		var b = 10;
+		function localVars() {
+			var a = 20;	// Declared a local variable 'a'
+			b = 20;		// Changed global variable b
+			return "Local variable 'a' = " + a + "\nGlobal variable 'b' = " + b;
+		}
+		var message = localVars();
+		var message2 = "\nGlobal variable 'a' = " + a;
+	</script>
+</head>
+<body>
+	<input type="button" value="Scope" onclick="alert(message + message2)" />
+</body>
+</html>

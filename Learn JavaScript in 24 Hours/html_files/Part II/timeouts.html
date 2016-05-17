@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A little on timeouts</title>
+    <script>
+		function hide( elementId ) {
+			document.getElementById(elementId).style.display = 'none';
+		}
+		window.onload = function() {
+			setTimeout("hide('div1')", 3000);
+		}
+    </script>
+</head>
+<body>
+	<div id="div1">I'm about to disappear</div>
+</body>
+</html>

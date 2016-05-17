@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prototype.js Example</title>
+    <script src="prototype.js"></script>
+	<script>
+		function showFormFields(){
+			var form = $('exampleForm');
+			var message = '';
+			var fields = form.getElements();
+			for(var x=0; x < fields.length; x++) {
+				message += "Field Name : " + fields[x].name + " Value : " + fields[x].value + "\n";
+			}
+			alert(message);
+		}
+	</script>
+</head>
+<body>
+	<form id="exampleForm" action="#" onsubmit="return false">
+		Username: <input type="text" name="username" /><br/>
+		Telephone: <input type="text" name="telephone" /><br/>
+		Message: <input type="text" name="message" /><br/>
+	</form>
+	<input type="button" value="Result" onclick="showFormFields();" />
+</body>
+</html>

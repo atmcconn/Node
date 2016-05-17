@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Canvas</title>
+    <script src="draw.js">
+    </script>
+	<script>
+			window.onload = function() {
+			context = canvas1.getContext('2d');
+			setInterval(animate, 100);
+		}
+	</script>
+</head>
+<body>
+	<canvas id="canvas1" width="400" height="300">
+		<p>Your browser doesn't support the vancas element.</p>
+	</canvas>
+</body>
+</html>

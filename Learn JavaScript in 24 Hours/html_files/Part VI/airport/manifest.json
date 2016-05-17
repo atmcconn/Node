@@ -1,0 +1,17 @@
+{
+   "name": "Airplane Extension",
+   "version": "1.0",
+   "manifest_version": 2,
+   "description": "IAD Airport Information",
+   "browser_action": {
+		"default_icon": "plane.png",
+		"default_popup": "popup.html"
+		},
+	"web_accessible_resources": [
+		"plane.png",
+		"popup.js"
+		],
+	"permissions": [
+		"http://services.faa.gov/"
+	]
+}

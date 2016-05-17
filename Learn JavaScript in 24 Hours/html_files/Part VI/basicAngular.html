@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Example</title>
+	<style>
+		body {
+			background-color: #ddf;
+			font: 16px bold helvetica, arial, sans-serif;
+		}
+		input {
+			padding: 10px;
+		}
+		#list-container {
+			background-color: white;
+			color: #448;
+			border-radius: 25px;
+			border: 1px solid black;
+			padding: 25px;
+		}
+	</style>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+    </script>
+</head>
+<body ng-app ng-init = "departments = [
+	{ name: 'Sales', contact: 'Marsha Brown' },
+	{ name: 'Support', contact: 'Dave Price' },
+	{ name: 'Production', contact: 'Grant Wales'},
+	{ name: 'Service', contact: 'Sherry Deil' },
+	{ name: 'Administration', contact: 'Sally Bennett' },
+	{ name: 'Accounting', contact: 'Kim Sutherland' },
+	{ name: 'Shipping', contact: 'Sandry Connell' }]">
+	<p>Search Departments: <input type="text" placeholder="Enter search string" ng-model="searchString"></p>
+	<div id="list-container">
+		<ul>
+			<li ng-repeat="dept in departments | filter: searchString">{{ dept.name + 
+			" (" + dept.contact + ")"}}</li>
+		</ul>
+	</div>
+</body>
+</html>

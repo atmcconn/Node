@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Getting Date and Time information</title>
+	<style>
+		p {font: 14px normal arial, verdana, helvetica;}
+	</style>
+    <script>
+		function tellTime(){
+			var out = "";
+			var now = new Date();
+			out += "<br />Date: " +now.getDate();
+			out += "<br />Month: " +now.getMonth();
+			out += "<br />Year: " +now.getFullYear();
+			out += "<br />Hours: " +now.getHours();
+			out += "<br />Minutes: " +now.getMinutes();
+			out += "<br />Seconds: " +now.getSeconds();
+			document.getElementById("div1").innerHTML = out;
+		}
+		window.onload = function() {
+			setInterval("tellTime()", 60000);
+		}
+    </script>
+</head>
+<body>
+	The current date and time are:<br/>
+	<div id="div1"></div>
+	<script>tellTime();</script>
+	<input type="button" value="Refresh" onclick="location.reload()" />
+</body>
+</html>
